@@ -61,6 +61,8 @@ function getJsFiles(version) {
     }
 
     jsFiles.push(src(`assets/js/main.js`));
+    jsFiles.push(src(`assets/js/matomo.js`));
+    jsFiles.push(src(`assets/js/cookies.js`));
 
     return jsFiles;
 }

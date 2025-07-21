@@ -1,32 +1,33 @@
-# Journal
+# Journal (Blog Edition)
 
-A minimal, typography-heavy newsletter theme for [Ghost](https://github.com/TryGhost/Ghost).
+A Ghost blog theme based of the Journal theme.
 
-**Demo: https://journal.ghost.io**
-
-# Instructions
+## Instructions
 
 1. [Download this theme](https://github.com/TryGhost/Journal/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
-# Development
+## Development
 
-Edition styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally.
+Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/) and [Gulp](https://gulpjs.com) installed.
 
-I'm going to use Docker to run a Node container.
+I'm going to use Docker to run a Node container with all the tools required.
 
 ```plaintext
-docker run --rm -it -v .:/app --workdir /app node:lts bash 
+docker run --rm -it \
+  -v ${PWD}:/app \
+  --workdir /app \
+  node:lts bash 
 ```
 
-After that, from the theme's root directory:
+After that, from the theme's root directory (`/app`):
 
 ```bash
 # Install
-yarn
+npm install
 
 # Run build & watch for changes
-yarn dev
+npm run dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -34,10 +35,10 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/journal.zip`, which you can then upload to your site.
 
 ```bash
-yarn zip
+npm run zip
 ```
 
-# Local Ghost Environment
+## Local Ghost Environment
 
 To test this locally before uploading to a live site, you should run Ghost locally and check it all looks good, again you can use Docker for this, run the following command and then head to <http://localhost:2368>.
 
@@ -45,12 +46,11 @@ To test this locally before uploading to a live site, you should run Ghost local
 docker run -d --name ghost -p 2368:2368 -e NODE_ENV=development ghost
 ```
 
-# Contribution
+## Copyright & License
 
-This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+Copyright (c) 2025 Sam Smith
 
-# Copyright & License
+Original work by  
+Copyright (c) 2013-2025 Ghost Foundation
 
-Copyright (c) 2025 Sam Smith  
-Copyright (c) 2013-2025 Ghost Foundation  
 Released under the [MIT license](LICENSE)
