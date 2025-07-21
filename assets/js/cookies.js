@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("cookie-accept-all").addEventListener("click", function () {
-        setCookie("cookie_consent", "full", 365);
+        setCookie("cookie_consent", "all", 365);
         cbHide();
 
         // Optionally: Load Matomo immediately on accept
