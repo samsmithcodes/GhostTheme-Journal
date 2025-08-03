@@ -23,18 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             label.className = 'code-lang';
             label.textContent = lang;
             wrapper.appendChild(label);
-
-            // Add copy button
-            const btn = document.createElement('button');
-            btn.className = 'code-copy-btn';
-            btn.textContent = 'Copy';
-            btn.addEventListener('click', () => {
-                navigator.clipboard.writeText(block.innerText).then(() => {
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
-                });
-            });
-            wrapper.appendChild(btn);
         }
     });
 });
