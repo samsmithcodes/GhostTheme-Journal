@@ -1,4 +1,6 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+
+@import url(code-block.css);
 @import url(cookie-banner.css);
 
 :root {

@@ -1,0 +1,22 @@
+.code-wrapper {
+    position: relative;
+    padding-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.code-lang {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+.code-copy-btn {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.code-copy-btn:hover {
+    background: #2563eb;
+}

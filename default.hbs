@@ -7,13 +7,17 @@
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
-    {{ghost_head}}
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css">
 
     <script>
         let matomoEnabled = {{#if @custom.matomo_enabled }}true{{else}}false{{/if}};
         let matomoURL = "{{@custom.matomo_url}}";
         let matomoSiteID = "{{@custom.matomo_site_id}}";
     </script>
+
+    {{ghost_head}}
 </head>
 
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}">

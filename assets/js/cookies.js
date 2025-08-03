@@ -46,8 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
         cbHide();
 
         // Optionally: Load Matomo immediately on accept
-        if (typeof loadMatomo === "function") {
-            loadMatomo();
+        if (matomoEnabled) {
+            if (typeof loadMatomo === "function") {
+                loadMatomo();
+            }
         }
     });
 });
