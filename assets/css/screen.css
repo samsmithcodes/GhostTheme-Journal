@@ -698,3 +698,16 @@
         top: 1px;
     }
 }
+
+.ss-footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.ss-footer a {
+    color: #fff;
+    text-decoration: none;
+}
